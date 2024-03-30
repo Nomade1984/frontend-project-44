@@ -1,0 +1,12 @@
+plugins:
+  -jest
+env:
+  node: true
+extends:
+  - 'airbnb-base'
+  - 'plugin:jest/recommend'
+parserOptions:
+  ecmaVersion: latest
+rules: {
+  'no-console': "off",
+}
