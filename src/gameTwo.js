@@ -1,68 +1,51 @@
 import readlineSync from "readline-sync";
+import { hello } from "../functions/hello.js";
+import { getAnswer } from "../functions/getAnswer.js";
 
 export const calculator = () => {
-  console.log("Welcome to the Brain Games!");
-
-  const userName = readlineSync.question("May I have your name? ");
-
-  console.log("Hello, " + userName + "!");
-
+  const user = hello();
   console.log("What is the result of the expression? ");
-
   const origin = [
     `${Math.round(Math.random() * 100)} + ${Math.round(Math.random() * 100)}`,
-
     `${Math.round(Math.random() * 100)} - ${Math.round(Math.random() * 100)}`,
-
     `${Math.round(Math.random() * 100)} * ${Math.round(Math.random() * 100)}`,
   ];
-
   let sum = 0;
-
-  let answer;
-
+  let inquiry;
   for (let i = 0; i < 3; i += 1) {
-    const randomIndex = Math.floor(Math.random() * (origin.length));
-
-    const result = origin[randomIndex];
-
-    console.log("Question: " + result);
-
-    sum += 1;
-
-    let arr = result.split(" ");
-
+    const randomIndex = Math.floor(Math.random() * origin.length);
+    const result1 = origin[randomIndex];
+    console.log("Question: " + result1);
+    let arr = result1.split(" ");
     if (arr[1] === "+") {
-      answer = +arr[0] + +arr[2];
+      inquiry = +arr[0] + +arr[2];
     } else if (arr[1] === "-") {
-      answer = +arr[0] - +arr[2];
+      inquiry = +arr[0] - +arr[2];
     } else {
-      answer = +arr[0] * +arr[2];
+      inquiry = +arr[0] * +arr[2];
     }
-
-    let respond = readlineSync.question("Your answer: ");
-
-    if (answer === +respond) {
+    inquiry = String(inquiry);
+    const result = getAnswer(inquiry);
+    if (result === true) {
+      sum += 1;
       console.log("Correct!");
     } else {
       console.log(
         "'" +
-          respond +
+          result +
           "'" +
           " is a wrong answer;(. Correct answer was " +
           "'" +
-          answer +
+          inquiry +
           "'" +
           ".\nLet's try again, " +
-          userName +
+          user +
           "!"
       );
-
       break;
     }
   }
-
   if (sum === 3) {
-    console.log("Congratulations, " + userName + "!");
+    console.log("Congratulations, " + user + "!");
   }
 };
