@@ -1,50 +1,34 @@
 import readlineSync from "readline-sync";
 import { hello } from "../functions/hello.js";
 import { getAnswer } from "../functions/getAnswer.js";
+import { getRandomNumber } from "../functions/randomNumber.js";
+
+const calc = (num1, num2) => {
+  if (num2 > num1) {
+    let temp = num1;
+    num1 = num2;
+    num2 = temp;
+  }
+  let result = num1 % num2;
+  while (result !== 0) {
+    num1 = num2;
+    num2 = result;
+    result = num1 % num2;
+  }
+  return num2;
+};
 
 export const divisor = () => {
   const user = hello();
   console.log("Find the greatest common divisor of given number.");
-  let sum = 0;
   for (let z = 0; z < 3; z += 1) {
-    const number1 = Math.round(Math.random() * 100);
-    const number2 = Math.round(Math.random() * 100);
+    const number1 = getRandomNumber() + 1;
+    const number2 = getRandomNumber() + 1;
     console.log("Question: " + number1 + " " + number2);
-    const arr1 = [];
-    const arr2 = [];
-    const arr3 = [];
-    for (let i = 1; i <= number1; i += 1) {
-      if (number1 % i === 0) {
-        arr1.push(i);
-      }
-    }
-    for (let j = 1; j <= number2; j += 1) {
-      if (number2 % j === 0) {
-        arr2.push(j);
-      }
-    }
-    let y = 0;
-    for (let x = 0; x < arr1.length; ) {
-      if (arr1[x] === arr2[y]) {
-        arr3.push(arr1[x]);
-        x += 1;
-        y += 1;
-      } else if (arr1[x] > arr2[y]) {
-        y += 1;
-      } else {
-        x += 1;
-      }
-    }
-    let max = arr3[0];
-    for (let k = 0; k < arr3.length; k += 1) {
-      if (max < arr3[k]) {
-        max = arr3[k];
-      }
-    }
-    const inquiry = String(max);
+    let inquiry = calc(number1, number2);
+    inquiry = String(inquiry);
     const result = getAnswer(inquiry);
     if (result === true) {
-      sum += 1;
       console.log("Correct!");
     } else {
       console.log(
@@ -55,14 +39,11 @@ export const divisor = () => {
           "'" +
           inquiry +
           "'" +
-          ".\nLet's try again, " +
-          user +
-          "!"
+          "."
       );
-      break;
+      console.log("Let's try again, " + user + "!");
+      return;
     }
   }
-  if (sum === 3) {
-    console.log("Congratulations, " + user + "!");
-  }
+  console.log("Congratulations, " + user + "!");
 };
