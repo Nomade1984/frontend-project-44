@@ -32,7 +32,7 @@ export const calculator = () => {
         "'" +
           result +
           "'" +
-          " is a wrong answer;(. Correct answer was " +
+          " is wrong answer ;(. Correct answer was " +
           "'" +
           inquiry +
           "'" +

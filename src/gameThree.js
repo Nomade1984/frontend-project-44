@@ -20,7 +20,7 @@ const calc = (num1, num2) => {
 
 export const divisor = () => {
   const user = hello();
-  console.log("Find the greatest common divisor of given number.");
+  console.log("Find the greatest common divisor of given numbers.");
   for (let z = 0; z < 3; z += 1) {
     const number1 = getRandomNumber() + 1;
     const number2 = getRandomNumber() + 1;
@@ -35,7 +35,7 @@ export const divisor = () => {
         "'" +
           result +
           "'" +
-          " is a wrong answer;(. Correct answer was " +
+          " is wrong answer ;(. Correct answer was " +
           "'" +
           inquiry +
           "'" +

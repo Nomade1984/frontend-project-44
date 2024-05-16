@@ -26,7 +26,7 @@ export const progress = () => {
         "'" +
           result +
           "'" +
-          " is a wrong answer;(. Correct answer was " +
+          " is wrong answer ;(. Correct answer was " +
           "'" +
           inquiry +
           "'" +

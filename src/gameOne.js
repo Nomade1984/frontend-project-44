@@ -18,7 +18,7 @@ export const victory = () => {
         "'" +
           result +
           "'" +
-          " is a wrong answer;(. Correct answer was " +
+          " is wrong answer ;(. Correct answer was " +
           "'" +
           inquiry +
           "'" +

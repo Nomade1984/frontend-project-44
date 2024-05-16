@@ -17,9 +17,7 @@ const primeCalc = (num) => {
 
 export const checkSimple = () => {
   const user = hello();
-  console.log(
-    'Answer "yes" if the given number is prime. Otherwise answer "no".'
-  );
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   let inquiry;
   for (let z = 0; z < 3; z += 1) {
     let number = getRandomNumber() + 2;
@@ -33,7 +31,7 @@ export const checkSimple = () => {
         "'" +
           result +
           "'" +
-          " is a wrong answer;(. Correct answer was " +
+          " is wrong answer ;(. Correct answer was " +
           "'" +
           inquiry +
           "'" +
