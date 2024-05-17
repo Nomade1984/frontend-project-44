@@ -1,11 +1,14 @@
-import readlineSync from "readline-sync";
-import { hello } from "../functions/hello.js";
-import { getAnswer } from "../functions/getAnswer.js";
-import { getRandomNumber } from "../functions/randomNumber.js";
+import readlineSync from 'readline-sync';
+
+import { hello } from '../functions/hello.js';
+
+import { getAnswer } from '../functions/getAnswer.js';
+
+import { getRandomNumber } from '../functions/randomNumber.js';
 
 export const progress = () => {
   const user = hello();
-  console.log("What number is missing in the progression?");
+  console.log('What number is missing in the progression?');
   for (let z = 0; z < 3; z += 1) {
     const number = getRandomNumber();
     const stack = [];
@@ -16,25 +19,25 @@ export const progress = () => {
     }
     const index = Math.round(Math.random() * (stack.length - 1));
     let inquiry = String(stack[index]);
-    stack[index] = "..";
-    console.log("Question: " + stack.join(" "));
+    stack[index] = '..';
+    console.log('Question: ' + stack.join(' '));
     const result = getAnswer(inquiry);
     if (result === true) {
-      console.log("Correct!");
+      console.log('Correct!');
     } else {
       console.log(
         "'" +
           result +
           "'" +
-          " is wrong answer ;(. Correct answer was " +
+          ' is wrong answer ;(. Correct answer was ' +
           "'" +
           inquiry +
           "'" +
-          "."
+          '.'
       );
-      console.log("Let's try again, " + user + "!");
+      console.log("Let's try again, " + user + '!');
       return;
     }
   }
-  console.log("Congratulations, " + user + "!");
+  console.log('Congratulations, ' + user + '!');
 };
