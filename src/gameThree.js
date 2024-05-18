@@ -28,7 +28,7 @@ export const divisor = () => {
     const number1 = getRandomNumber() + 1;
     const number2 = getRandomNumber() + 1;
     console.log('Question: ' + number1 + ' ' + number2);
-    const inquiry = calc(number1, number2);
+    let inquiry = calc(number1, number2);
     inquiry = String(inquiry);
     const result = getAnswer(inquiry);
     if (result === true) {
