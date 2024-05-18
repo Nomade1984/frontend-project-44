@@ -18,23 +18,14 @@ export const progress = () => {
       stack[i] = stack[i - 1] + randomAdd;
     }
     const index = Math.round(Math.random() * (stack.length - 1));
-    let inquiry = String(stack[index]);
+    const inquiry = String(stack[index]);
     stack[index] = '..';
     console.log('Question: ' + stack.join(' '));
     const result = getAnswer(inquiry);
     if (result === true) {
       console.log('Correct!');
     } else {
-      console.log(
-        "'" +
-          result +
-          "'" +
-          ' is wrong answer ;(. Correct answer was ' +
-          "'" +
-          inquiry +
-          "'" +
-          '.'
-      );
+      console.log("'" + result + "'" + ' is wrong answer ;(. Correct answer was ' + "'" + inquiry + "'" + '.');
       console.log("Let's try again, " + user + '!');
       return;
     }

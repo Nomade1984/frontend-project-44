@@ -31,16 +31,7 @@ export const calculator = () => {
     if (result === true) {
       console.log('Correct!');
     } else {
-      console.log(
-        "'" +
-          result +
-          "'" +
-          ' is wrong answer ;(. Correct answer was ' +
-          "'" +
-          inquiry +
-          "'" +
-          '.'
-      );
+      console.log("'" + result + "'" + ' is wrong answer ;(. Correct answer was ' + "'" + inquiry + "'" + '.');
       console.log("Let's try again, " + user + '!');
       return;
     }

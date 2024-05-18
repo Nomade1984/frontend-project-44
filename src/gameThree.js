@@ -8,7 +8,7 @@ import { getRandomNumber } from '../functions/randomNumber.js';
 
 const calc = (num1, num2) => {
   if (num2 > num1) {
-    let temp = num1;
+    const temp = num1;
     num1 = num2;
     num2 = temp;
   }
@@ -28,22 +28,13 @@ export const divisor = () => {
     const number1 = getRandomNumber() + 1;
     const number2 = getRandomNumber() + 1;
     console.log('Question: ' + number1 + ' ' + number2);
-    let inquiry = calc(number1, number2);
+    const inquiry = calc(number1, number2);
     inquiry = String(inquiry);
     const result = getAnswer(inquiry);
     if (result === true) {
       console.log('Correct!');
     } else {
-      console.log(
-        "'" +
-          result +
-          "'" +
-          ' is wrong answer ;(. Correct answer was ' +
-          "'" +
-          inquiry +
-          "'" +
-          '.'
-      );
+      console.log("'" + result + "'" + ' is wrong answer ;(. Correct answer was ' + "'" + inquiry + "'" + '.');
       console.log("Let's try again, " + user + '!');
       return;
     }
