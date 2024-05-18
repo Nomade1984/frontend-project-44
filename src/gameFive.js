@@ -1,5 +1,3 @@
-import readlineSync from 'readline-sync';
-
 import { hello } from '../functions/hello.js';
 
 import { getAnswer } from '../functions/getAnswer.js';
@@ -17,7 +15,6 @@ const primeCalc = (num) => {
   }
   return 'yes';
 };
-
 export const checkSimple = () => {
   const user = hello();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
@@ -25,15 +22,15 @@ export const checkSimple = () => {
   for (let z = 0; z < 3; z += 1) {
     const number = getRandomNumber() + 2;
     inquiry = primeCalc(number);
-    console.log('Question: ' + number);
+    console.log(`Question: ${number}`);
     const result = getAnswer(inquiry);
     if (result === true) {
-      console.log('Correct!');
+      console.log(`Correct!`);
     } else {
-      console.log("'" + result + "'" + ' is wrong answer ;(. Correct answer was ' + "'" + inquiry + "'" + '.');
-      console.log("Let's try again, " + user + '!');
+      console.log(`'${result}' is wrong answer ;(. Correct answer was '${inquiry}'.`);
+      console.log(`Let's try again, ${user}!`);
       return;
     }
   }
-  console.log('Congratulations, ' + user + '!');
+  console.log(`Congratulations, ${user}!`);
 };
