@@ -1,5 +1,3 @@
-import readlineSync from 'readline-sync';
-
 import { hello } from '../functions/hello.js';
 
 import { getAnswer } from '../functions/getAnswer.js';
@@ -27,17 +25,17 @@ export const divisor = () => {
   for (let z = 0; z < 3; z += 1) {
     const number1 = getRandomNumber() + 1;
     const number2 = getRandomNumber() + 1;
-    console.log('Question: ' + number1 + ' ' + number2);
+    console.log(`Question: ${number1} ${number2}`);
     let inquiry = calc(number1, number2);
     inquiry = String(inquiry);
     const result = getAnswer(inquiry);
     if (result === true) {
       console.log('Correct!');
     } else {
-      console.log("'" + result + "'" + ' is wrong answer ;(. Correct answer was ' + "'" + inquiry + "'" + '.');
-      console.log("Let's try again, " + user + '!');
+      console.log(`'${result}' is wrong answer ;(. Correct answer was '${inquiry}'.`);
+      console.log(`Let's try again, ${user}!`);
       return;
     }
   }
-  console.log('Congratulations, ' + user + '!');
+  console.log(`Congratulations, ${user}!`);
 };

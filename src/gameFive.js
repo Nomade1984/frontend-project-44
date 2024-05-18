@@ -15,6 +15,7 @@ const primeCalc = (num) => {
   }
   return 'yes';
 };
+
 export const checkSimple = () => {
   const user = hello();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
@@ -25,7 +26,7 @@ export const checkSimple = () => {
     console.log(`Question: ${number}`);
     const result = getAnswer(inquiry);
     if (result === true) {
-      console.log(`Correct!`);
+      console.log('Correct!');
     } else {
       console.log(`'${result}' is wrong answer ;(. Correct answer was '${inquiry}'.`);
       console.log(`Let's try again, ${user}!`);
