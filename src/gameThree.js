@@ -5,18 +5,20 @@ import { getAnswer } from '../functions/getAnswer.js';
 import { getRandomNumber } from '../functions/randomNumber.js';
 
 const calc = (num1, num2) => {
-  if (num2 > num1) {
-    const temp = num1;
-    num1 = num2;
-    num2 = temp;
+  let numOne = num1;
+  let numTwo = num2;
+  if (numTwo > numOne) {
+    const temp = numOne;
+    numOne = numTwo;
+    numTwo = temp;
   }
-  let result = num1 % num2;
+  let result = numOne % numTwo;
   while (result !== 0) {
-    num1 = num2;
-    num2 = result;
-    result = num1 % num2;
+    numOne = numTwo;
+    numTwo = result;
+    result = numOne % numTwo;
   }
-  return num2;
+  return numTwo;
 };
 
 export const divisor = () => {

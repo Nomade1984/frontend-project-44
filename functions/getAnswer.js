@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 
 export const getAnswer = (inquiry) => {
-  let answer = readlineSync.question('Your answer: ');
+  const answer = readlineSync.question('Your answer: ');
   let check;
   if (answer === inquiry) {
     check = true;

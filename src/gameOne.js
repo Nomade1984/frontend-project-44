@@ -1,5 +1,3 @@
-import readlineSync from 'readline-sync';
-
 import { hello } from '../functions/hello.js';
 
 import { getAnswer } from '../functions/getAnswer.js';
