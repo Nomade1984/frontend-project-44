@@ -1,8 +1,8 @@
-import { hello } from '../functions/hello.js';
+import hello from '../functions/hello.js';
 
-import { getAnswer } from '../functions/getAnswer.js';
+import getAnswer from '../functions/getAnswer.js';
 
-import { getRandomNumber } from '../functions/randomNumber.js';
+import getRandomNumber from '../functions/randomNumber.js';
 
 const calc = (num1, num2) => {
   let numOne = num1;
@@ -21,7 +21,7 @@ const calc = (num1, num2) => {
   return numTwo;
 };
 
-export const divisor = () => {
+const divisor = () => {
   const user = hello();
   console.log('Find the greatest common divisor of given numbers.');
   for (let z = 0; z < 3; z += 1) {
@@ -41,3 +41,4 @@ export const divisor = () => {
   }
   console.log(`Congratulations, ${user}!`);
 };
+export default divisor;

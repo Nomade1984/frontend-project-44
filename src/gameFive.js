@@ -1,8 +1,8 @@
-import { hello } from '../functions/hello.js';
+import hello from '../functions/hello.js';
 
-import { getAnswer } from '../functions/getAnswer.js';
+import getAnswer from '../functions/getAnswer.js';
 
-import { getRandomNumber } from '../functions/randomNumber.js';
+import getRandomNumber from '../functions/randomNumber.js';
 
 const primeCalc = (num) => {
   if (num === 2) {
@@ -16,7 +16,7 @@ const primeCalc = (num) => {
   return 'yes';
 };
 
-export const checkSimple = () => {
+const checkSimple = () => {
   const user = hello();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   let inquiry;
@@ -35,3 +35,4 @@ export const checkSimple = () => {
   }
   console.log(`Congratulations, ${user}!`);
 };
+export default checkSimple;

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { answer } from '../src/cli.js';
+import answer from '../src/cli.js';
 
 console.log('Welcome to the Brain Games!');
 answer();

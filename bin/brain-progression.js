@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { progress } from '../src/gameFour.js';
+import progress from '../src/gameFour.js';
 
 progress();

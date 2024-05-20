@@ -1,10 +1,10 @@
-import { hello } from '../functions/hello.js';
+import hello from '../functions/hello.js';
 
-import { getAnswer } from '../functions/getAnswer.js';
+import getAnswer from '../functions/getAnswer.js';
 
-import { getRandomNumber } from '../functions/randomNumber.js';
+import getRandomNumber from '../functions/randomNumber.js';
 
-export const progress = () => {
+const progress = () => {
   const user = hello();
   console.log('What number is missing in the progression?');
   for (let z = 0; z < 3; z += 1) {
@@ -30,3 +30,4 @@ export const progress = () => {
   }
   console.log(`Congratulations, ${user}!`);
 };
+export default progress;

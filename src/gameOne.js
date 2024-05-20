@@ -1,10 +1,10 @@
-import { hello } from '../functions/hello.js';
+import hello from '../functions/hello.js';
 
-import { getAnswer } from '../functions/getAnswer.js';
+import getAnswer from '../functions/getAnswer.js';
 
-import { getRandomNumber } from '../functions/randomNumber.js';
+import getRandomNumber from '../functions/randomNumber.js';
 
-export const victory = () => {
+const victory = () => {
   const user = hello();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
@@ -22,3 +22,4 @@ export const victory = () => {
   }
   console.log(`Congratulations, ${user}!`);
 };
+export default victory;

@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export const getAnswer = (inquiry) => {
+const getAnswer = (inquiry) => {
   const answer = readlineSync.question('Your answer: ');
   let check;
   if (answer === inquiry) {
@@ -10,3 +10,4 @@ export const getAnswer = (inquiry) => {
   }
   return check;
 };
+export default getAnswer;

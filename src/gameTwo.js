@@ -1,10 +1,10 @@
-import { hello } from '../functions/hello.js';
+import hello from '../functions/hello.js';
 
-import { getAnswer } from '../functions/getAnswer.js';
+import getAnswer from '../functions/getAnswer.js';
 
-import { getRandomNumber } from '../functions/randomNumber.js';
+import getRandomNumber from '../functions/randomNumber.js';
 
-export const calculator = () => {
+const calculator = () => {
   const user = hello();
   console.log('What is the result of the expression? ');
   const mathSymbol = ['+', '-', '*'];
@@ -36,3 +36,4 @@ export const calculator = () => {
   }
   console.log(`Congratulations, ${user}!`);
 };
+export default calculator;
