@@ -1,17 +1,19 @@
-import getAnswer from '../utils/getAnswer.js';
+import getAnswer from './getAnswer.js';
 
 const getUserInfo = (name, arg, index) => {
+  let inside = index;
   const result = getAnswer(arg);
   if (result === true) {
     console.log('Correct!');
   } else {
     console.log(`'${result}' is wrong answer ;(. Correct answer was '${arg}'.`);
     console.log(`Let's try again, ${name}!`);
-    index = 3;
-    return index;
+    inside = 3;
+    return inside;
   }
-  if (index === 2) {
+  if (inside === 2) {
     console.log(`Congratulations, ${name}!`);
   }
+  return inside;
 };
 export default getUserInfo;
