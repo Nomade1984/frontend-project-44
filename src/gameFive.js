@@ -1,8 +1,8 @@
-import hello from '../functions/hello.js';
+import hello from './utils/hello.js';
 
-import getAnswer from '../functions/getAnswer.js';
+import getRandomNumber from './utils/randomNumber.js';
 
-import getRandomNumber from '../functions/randomNumber.js';
+import getUserInfo from './utils/getUserInfo.js';
 
 const primeCalc = (num) => {
   if (num === 2) {
@@ -24,15 +24,10 @@ const checkSimple = () => {
     const number = getRandomNumber() + 2;
     inquiry = primeCalc(number);
     console.log(`Question: ${number}`);
-    const result = getAnswer(inquiry);
-    if (result === true) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${result}' is wrong answer ;(. Correct answer was '${inquiry}'.`);
-      console.log(`Let's try again, ${user}!`);
-      return;
+    const exit = getUserInfo(user, inquiry, z);
+    if (exit === 3) {
+      break;
     }
   }
-  console.log(`Congratulations, ${user}!`);
 };
 export default checkSimple;

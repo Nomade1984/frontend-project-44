@@ -1,8 +1,8 @@
-import hello from '../functions/hello.js';
+import hello from './utils/hello.js';
 
-import getAnswer from '../functions/getAnswer.js';
+import getRandomNumber from './utils/randomNumber.js';
 
-import getRandomNumber from '../functions/randomNumber.js';
+import getUserInfo from './utils/getUserInfo.js';
 
 const calc = (num1, num2) => {
   let numOne = num1;
@@ -30,15 +30,10 @@ const divisor = () => {
     console.log(`Question: ${number1} ${number2}`);
     let inquiry = calc(number1, number2);
     inquiry = String(inquiry);
-    const result = getAnswer(inquiry);
-    if (result === true) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${result}' is wrong answer ;(. Correct answer was '${inquiry}'.`);
-      console.log(`Let's try again, ${user}!`);
-      return;
+    const exit = getUserInfo(user, inquiry, z);
+    if (exit === 3) {
+      break;
     }
   }
-  console.log(`Congratulations, ${user}!`);
 };
 export default divisor;

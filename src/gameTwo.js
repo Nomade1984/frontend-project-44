@@ -1,8 +1,8 @@
-import hello from '../functions/hello.js';
+import hello from './utils/hello.js';
 
-import getAnswer from '../functions/getAnswer.js';
+import getRandomNumber from './utils/randomNumber.js';
 
-import getRandomNumber from '../functions/randomNumber.js';
+import getUserInfo from './utils/getUserInfo.js';
 
 const calculator = () => {
   const user = hello();
@@ -25,15 +25,10 @@ const calculator = () => {
       console.log(`Question: ${number1} * ${number2}`);
     }
     inquiry = String(inquiry);
-    const result = getAnswer(inquiry);
-    if (result === true) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${result}' is wrong answer ;(. Correct answer was '${inquiry}'.`);
-      console.log(`Let's try again, ${user}!`);
-      return;
+    const exit = getUserInfo(user, inquiry, i);
+    if (exit === 3) {
+      break;
     }
   }
-  console.log(`Congratulations, ${user}!`);
 };
 export default calculator;
