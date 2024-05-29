@@ -6,17 +6,6 @@ import getRandomNumber from './utils/randomNumber.js';
 
 import getUserInfo from './utils/getUserInfo.js';
 
-const detailsFive = (argument, i) => {
-  let inquiry;
-  const number = getRandomNumber() + 2;
-  inquiry = primeCalc(number);
-  console.log(`Question: ${number}`);
-  const exit = getUserInfo(argument, inquiry, i);
-  if (exit === 3) {
-    return 3;
-  }
-};
-
 const primeCalc = (num) => {
   if (num === 2) {
     return 'yes';
@@ -27,6 +16,17 @@ const primeCalc = (num) => {
     }
   }
   return 'yes';
+};
+
+const detailsFive = (argument, i) => {
+  const number = getRandomNumber() + 2;
+  const inquiry = primeCalc(number);
+  console.log(`Question: ${number}`);
+  const exit = getUserInfo(argument, inquiry, i);
+  if (exit === 3) {
+    return 3;
+  }
+  return;
 };
 
 const checkSimple = () => {

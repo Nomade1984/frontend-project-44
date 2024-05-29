@@ -28,6 +28,7 @@ const detailsTwo = (argument, i) => {
   if (exit === 3) {
     return 3;
   }
+  return;
 };
 
 const calculator = () => {

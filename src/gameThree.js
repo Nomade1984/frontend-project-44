@@ -6,18 +6,6 @@ import getRandomNumber from './utils/randomNumber.js';
 
 import getUserInfo from './utils/getUserInfo.js';
 
-const detailsThree = (argument, i) => {
-  const number1 = getRandomNumber() + 1;
-  const number2 = getRandomNumber() + 1;
-  console.log(`Question: ${number1} ${number2}`);
-  let inquiry = calc(number1, number2);
-  inquiry = String(inquiry);
-  const exit = getUserInfo(argument, inquiry, i);
-  if (exit === 3) {
-    return 3;
-  }
-};
-
 const calc = (num1, num2) => {
   let numOne = num1;
   let numTwo = num2;
@@ -33,6 +21,19 @@ const calc = (num1, num2) => {
     result = numOne % numTwo;
   }
   return numTwo;
+};
+
+const detailsThree = (argument, i) => {
+  const number1 = getRandomNumber() + 1;
+  const number2 = getRandomNumber() + 1;
+  console.log(`Question: ${number1} ${number2}`);
+  let inquiry = calc(number1, number2);
+  inquiry = String(inquiry);
+  const exit = getUserInfo(argument, inquiry, i);
+  if (exit === 3) {
+    return 3;
+  }
+  return;
 };
 
 const divisor = () => {
