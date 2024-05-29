@@ -26,7 +26,6 @@ const detailsFive = (argument, i) => {
   if (exit === 3) {
     return 3;
   }
-  return 1;
 };
 
 const checkSimple = () => {
