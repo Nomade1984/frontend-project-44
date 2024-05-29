@@ -1,8 +1,22 @@
+import iteration from './utils/getIterator.js';
+
 import hello from './utils/hello.js';
 
 import getRandomNumber from './utils/randomNumber.js';
 
 import getUserInfo from './utils/getUserInfo.js';
+
+const detailsThree = (argument, i) => {
+  const number1 = getRandomNumber() + 1;
+  const number2 = getRandomNumber() + 1;
+  console.log(`Question: ${number1} ${number2}`);
+  let inquiry = calc(number1, number2);
+  inquiry = String(inquiry);
+  const exit = getUserInfo(argument, inquiry, i);
+  if (exit === 3) {
+    return 3;
+  }
+};
 
 const calc = (num1, num2) => {
   let numOne = num1;
@@ -24,16 +38,6 @@ const calc = (num1, num2) => {
 const divisor = () => {
   const user = hello();
   console.log('Find the greatest common divisor of given numbers.');
-  for (let z = 0; z < 3; z += 1) {
-    const number1 = getRandomNumber() + 1;
-    const number2 = getRandomNumber() + 1;
-    console.log(`Question: ${number1} ${number2}`);
-    let inquiry = calc(number1, number2);
-    inquiry = String(inquiry);
-    const exit = getUserInfo(user, inquiry, z);
-    if (exit === 3) {
-      break;
-    }
-  }
+  iteration(detailsThree, user);
 };
 export default divisor;
