@@ -33,7 +33,7 @@ const detailsThree = (argument, i) => {
   if (exit === 3) {
     return 3;
   }
-  return;
+  return 1;
 };
 
 const divisor = () => {
