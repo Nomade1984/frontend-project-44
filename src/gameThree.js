@@ -1,6 +1,4 @@
-import iteration from './utils/getIterator.js';
-
-import hello from './utils/hello.js';
+import everything from './utils/generalFunction.js';
 
 import getRandomNumber from './utils/randomNumber.js';
 
@@ -37,8 +35,6 @@ const detailsThree = (argument, i) => {
 };
 
 const divisor = () => {
-  const user = hello();
-  console.log('Find the greatest common divisor of given numbers.');
-  iteration(detailsThree, user);
+  everything(detailsThree, 'Find the greatest common divisor of given numbers.');
 };
 export default divisor;

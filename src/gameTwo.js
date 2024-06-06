@@ -1,6 +1,4 @@
-import iteration from './utils/getIterator.js';
-
-import hello from './utils/hello.js';
+import everything from './utils/generalFunction.js';
 
 import getRandomNumber from './utils/randomNumber.js';
 
@@ -32,8 +30,6 @@ const detailsTwo = (argument, i) => {
 };
 
 const calculator = () => {
-  const user = hello();
-  console.log('What is the result of the expression? ');
-  iteration(detailsTwo, user);
+  everything(detailsTwo, 'What is the result of the expression? ');
 };
 export default calculator;

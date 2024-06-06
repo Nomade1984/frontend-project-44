@@ -1,6 +1,4 @@
-import iteration from './utils/getIterator.js';
-
-import hello from './utils/hello.js';
+import everything from './utils/generalFunction.js';
 
 import getRandomNumber from './utils/randomNumber.js';
 
@@ -18,8 +16,6 @@ const detailsOne = (argument, i) => {
 };
 
 const victory = () => {
-  const user = hello();
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  iteration(detailsOne, user);
+  everything(detailsOne, 'Answer "yes" if the number is even, otherwise answer "no".');
 };
 export default victory;

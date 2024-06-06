@@ -1,6 +1,4 @@
-import iteration from './utils/getIterator.js';
-
-import hello from './utils/hello.js';
+import everything from './utils/generalFunction.js';
 
 import getRandomNumber from './utils/randomNumber.js';
 
@@ -26,8 +24,6 @@ const detailsFour = (argument, i) => {
 };
 
 const progress = () => {
-  const user = hello();
-  console.log('What number is missing in the progression?');
-  iteration(detailsFour, user);
+  everything(detailsFour, 'What number is missing in the progression?');
 };
 export default progress;

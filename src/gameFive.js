@@ -1,6 +1,4 @@
-import iteration from './utils/getIterator.js';
-
-import hello from './utils/hello.js';
+import everything from './utils/generalFunction.js';
 
 import getRandomNumber from './utils/randomNumber.js';
 
@@ -30,8 +28,6 @@ const detailsFive = (argument, i) => {
 };
 
 const checkSimple = () => {
-  const user = hello();
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  iteration(detailsFive, user);
+  everything(detailsFive, 'Answer "yes" if given number is prime. Otherwise answer "no".');
 };
 export default checkSimple;
