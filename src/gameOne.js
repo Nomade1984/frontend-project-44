@@ -4,15 +4,12 @@ import getRandomNumber from './utils/randomNumber.js';
 
 import getUserInfo from './utils/getUserInfo.js';
 
-const detailsOne = (argument, i) => {
+const detailsOne = (argument, index) => {
   const number = getRandomNumber();
-  console.log(`Question: ${number}`);
+  const question = `Question: ${number}`;
   const inquiry = number % 2 === 0 ? 'yes' : 'no';
-  const exit = getUserInfo(argument, inquiry, i);
-  if (exit === 3) {
-    return 3;
-  }
-  return 1;
+  const exit = getUserInfo(argument, inquiry, index, question);
+  return exit;
 };
 
 const victory = () => {

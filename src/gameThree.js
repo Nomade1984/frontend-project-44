@@ -24,14 +24,11 @@ const calc = (num1, num2) => {
 const detailsThree = (argument, i) => {
   const number1 = getRandomNumber() + 1;
   const number2 = getRandomNumber() + 1;
-  console.log(`Question: ${number1} ${number2}`);
+  const question = `Question: ${number1} ${number2}`;
   let inquiry = calc(number1, number2);
   inquiry = String(inquiry);
-  const exit = getUserInfo(argument, inquiry, i);
-  if (exit === 3) {
-    return 3;
-  }
-  return 1;
+  const exit = getUserInfo(argument, inquiry, i, question);
+  return exit;
 };
 
 const divisor = () => {

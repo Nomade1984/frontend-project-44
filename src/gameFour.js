@@ -15,12 +15,9 @@ const detailsFour = (argument, i) => {
   const index = Math.round(Math.random() * (stack.length - 1));
   const inquiry = String(stack[index]);
   stack[index] = '..';
-  console.log(`Question: ${stack.join(' ')}`);
-  const exit = getUserInfo(argument, inquiry, i);
-  if (exit === 3) {
-    return 3;
-  }
-  return 1;
+  const question = `Question: ${stack.join(' ')}`;
+  const exit = getUserInfo(argument, inquiry, i, question);
+  return exit;
 };
 
 const progress = () => {

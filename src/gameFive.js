@@ -19,12 +19,9 @@ const primeCalc = (num) => {
 const detailsFive = (argument, i) => {
   const number = getRandomNumber() + 2;
   const inquiry = primeCalc(number);
-  console.log(`Question: ${number}`);
-  const exit = getUserInfo(argument, inquiry, i);
-  if (exit === 3) {
-    return 3;
-  }
-  return 1;
+  const question = `Question: ${number}`;
+  const exit = getUserInfo(argument, inquiry, i, question);
+  return exit;
 };
 
 const checkSimple = () => {

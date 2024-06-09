@@ -1,6 +1,7 @@
 import getAnswer from './getAnswer.js';
 
-const getUserInfo = (name, arg, index) => {
+const getUserInfo = (name, arg, index, ask) => {
+  console.log(ask);
   let inside = index;
   const result = getAnswer(arg);
   if (result === true) {
@@ -16,4 +17,5 @@ const getUserInfo = (name, arg, index) => {
   }
   return inside;
 };
+
 export default getUserInfo;
