@@ -2,14 +2,11 @@ import everything from './utils/generalFunction.js';
 
 import getRandomNumber from './utils/randomNumber.js';
 
-import getUserInfo from './utils/getUserInfo.js';
-
-const detailsOne = (argument, index) => {
+const detailsOne = () => {
   const number = getRandomNumber();
   const question = `Question: ${number}`;
   const inquiry = number % 2 === 0 ? 'yes' : 'no';
-  const exit = getUserInfo(argument, inquiry, index, question);
-  return exit;
+  return [question, inquiry];
 };
 
 const victory = () => {

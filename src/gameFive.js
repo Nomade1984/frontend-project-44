@@ -2,8 +2,6 @@ import everything from './utils/generalFunction.js';
 
 import getRandomNumber from './utils/randomNumber.js';
 
-import getUserInfo from './utils/getUserInfo.js';
-
 const primeCalc = (num) => {
   if (num === 2) {
     return 'yes';
@@ -16,12 +14,11 @@ const primeCalc = (num) => {
   return 'yes';
 };
 
-const detailsFive = (argument, i) => {
+const detailsFive = () => {
   const number = getRandomNumber() + 2;
   const inquiry = primeCalc(number);
   const question = `Question: ${number}`;
-  const exit = getUserInfo(argument, inquiry, i, question);
-  return exit;
+  return [question, inquiry];
 };
 
 const checkSimple = () => {

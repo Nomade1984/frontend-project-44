@@ -2,9 +2,7 @@ import everything from './utils/generalFunction.js';
 
 import getRandomNumber from './utils/randomNumber.js';
 
-import getUserInfo from './utils/getUserInfo.js';
-
-const detailsTwo = (argument, i) => {
+const detailsTwo = () => {
   const mathSymbol = ['+', '-', '*'];
   let inquiry;
   let question;
@@ -23,8 +21,7 @@ const detailsTwo = (argument, i) => {
     question = `Question: ${number1} * ${number2}`;
   }
   inquiry = String(inquiry);
-  const exit = getUserInfo(argument, inquiry, i, question);
-  return exit;
+  return [question, inquiry];
 };
 
 const calculator = () => {

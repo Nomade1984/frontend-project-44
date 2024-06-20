@@ -2,9 +2,7 @@ import everything from './utils/generalFunction.js';
 
 import getRandomNumber from './utils/randomNumber.js';
 
-import getUserInfo from './utils/getUserInfo.js';
-
-const detailsFour = (argument, i) => {
+const detailsFour = () => {
   const number = getRandomNumber();
   const stack = [];
   stack[0] = number;
@@ -16,8 +14,7 @@ const detailsFour = (argument, i) => {
   const inquiry = String(stack[index]);
   stack[index] = '..';
   const question = `Question: ${stack.join(' ')}`;
-  const exit = getUserInfo(argument, inquiry, i, question);
-  return exit;
+  return [question, inquiry];
 };
 
 const progress = () => {
