@@ -1,8 +1,8 @@
-import everything from './utils/generalFunction.js';
+import startQuiz from './utils/generalFunction.js';
 
 import getRandomNumber from './utils/randomNumber.js';
 
-const detailsFour = () => {
+const startGameProgression = () => {
   const number = getRandomNumber();
   const stack = [];
   stack[0] = number;
@@ -17,7 +17,7 @@ const detailsFour = () => {
   return [question, inquiry];
 };
 
-const progress = () => {
-  everything(detailsFour, 'What number is missing in the progression?');
+const getGameDataFour = () => {
+  startQuiz(startGameProgression, 'What number is missing in the progression?');
 };
-export default progress;
+export default getGameDataFour;

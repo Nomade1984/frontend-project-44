@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import divisor from '../src/gameThree.js';
+import getGameDataThree from '../src/gameThree.js';
 
-divisor();
+getGameDataThree();

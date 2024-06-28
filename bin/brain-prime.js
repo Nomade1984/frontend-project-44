@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import checkSimple from '../src/gameFive.js';
+import getGameDataFive from '../src/gameFive.js';
 
-checkSimple();
+getGameDataFive();

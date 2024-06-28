@@ -1,4 +1,4 @@
-import everything from './utils/generalFunction.js';
+import startQuiz from './utils/generalFunction.js';
 
 import getRandomNumber from './utils/randomNumber.js';
 
@@ -19,7 +19,7 @@ const calc = (num1, num2) => {
   return numTwo;
 };
 
-const detailsThree = () => {
+const startGameDivisor = () => {
   const number1 = getRandomNumber() + 1;
   const number2 = getRandomNumber() + 1;
   const question = `Question: ${number1} ${number2}`;
@@ -28,7 +28,7 @@ const detailsThree = () => {
   return [question, inquiry];
 };
 
-const divisor = () => {
-  everything(detailsThree, 'Find the greatest common divisor of given numbers.');
+const getGameDataThree = () => {
+  startQuiz(startGameDivisor, 'Find the greatest common divisor of given numbers.');
 };
-export default divisor;
+export default getGameDataThree;

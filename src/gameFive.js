@@ -1,4 +1,4 @@
-import everything from './utils/generalFunction.js';
+import startQuiz from './utils/generalFunction.js';
 
 import getRandomNumber from './utils/randomNumber.js';
 
@@ -14,14 +14,14 @@ const primeCalc = (num) => {
   return 'yes';
 };
 
-const detailsFive = () => {
+const startGamePrime = () => {
   const number = getRandomNumber() + 2;
   const inquiry = primeCalc(number);
   const question = `Question: ${number}`;
   return [question, inquiry];
 };
 
-const checkSimple = () => {
-  everything(detailsFive, 'Answer "yes" if given number is prime. Otherwise answer "no".');
+const getGameDataFive = () => {
+  startQuiz(startGamePrime, 'Answer "yes" if given number is prime. Otherwise answer "no".');
 };
-export default checkSimple;
+export default getGameDataFive;

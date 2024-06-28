@@ -1,8 +1,8 @@
-import everything from './utils/generalFunction.js';
+import startQuiz from './utils/generalFunction.js';
 
 import getRandomNumber from './utils/randomNumber.js';
 
-const detailsTwo = () => {
+const startGameCalc = () => {
   const mathSymbol = ['+', '-', '*'];
   let inquiry;
   let question;
@@ -24,7 +24,8 @@ const detailsTwo = () => {
   return [question, inquiry];
 };
 
-const calculator = () => {
-  everything(detailsTwo, 'What is the result of the expression? ');
+const getGameDataTwo = () => {
+  startQuiz(startGameCalc, 'What is the result of the expression? ');
 };
-export default calculator;
+
+export default getGameDataTwo;
